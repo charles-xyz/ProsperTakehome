@@ -3,15 +3,6 @@
 
 This service provides assessment slots for clients based on the details provided by the user. It uses mock clinician data to return available time slots.
 
-## Getting Started
-
-### Prerequisites
-
-To start the server, ensure that you have the following installed:
-
-- Node.js (v14 or higher recommended)
-- npm (Node Package Manager)
-
 ### Installation
 
 1. Clone the repository:
@@ -67,6 +58,8 @@ You can run tests using jest with the following command:
 ```sh
 npx jest tests/task1.test.ts
 ```
+
+each test file addresses it's respective task given your requirements, and provides basic scalability testing
 
 ## Notes
 
