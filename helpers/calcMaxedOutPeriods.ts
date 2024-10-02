@@ -15,7 +15,7 @@ export function calculateMaxedOutPeriods(clinicians: Clinician[]): MaxedOutPerio
 
     //check if appointment is valid to count toward max
     for (const appointment of appointments) {
-      if (['RE_SCHEDULED', 'OCCURRED', 'UPCOMING'].includes(appointment.status)) {
+      if (['OCCURRED', ''].includes(appointment.status)) {
         const appointmentDate = new Date(appointment.scheduledFor)
         const weekNumber = getWeekNumber(appointmentDate)
         const dateString = appointmentDate.toISOString().split('T')[0]; //split before time and take only the date
