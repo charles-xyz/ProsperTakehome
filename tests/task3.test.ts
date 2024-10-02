@@ -16,14 +16,14 @@ describe('calcMaxedOutPeriods', () => {
         insurances: [],
         clinicianType: ClinicianType.PSYCHOLOGIST,
         appointments: [
-                { scheduledFor: '2024-10-01T10:00:00.000Z', status: AppointmentStatus.UPCOMING },
-                { scheduledFor: '2024-10-01T11:00:00.000Z', status: AppointmentStatus.UPCOMING },
-                { scheduledFor: '2024-10-01T12:00:00.000Z', status: AppointmentStatus.UPCOMING }, // Max daily reached for 2024-10-01
-                { scheduledFor: '2024-10-02T10:00:00.000Z', status: AppointmentStatus.UPCOMING },
-                { scheduledFor: '2024-10-02T11:00:00.000Z', status: AppointmentStatus.UPCOMING },
-                { scheduledFor: '2024-10-03T12:00:00.000Z', status: AppointmentStatus.UPCOMING },
-                { scheduledFor: '2024-10-03T10:00:00.000Z', status: AppointmentStatus.UPCOMING },
-                { scheduledFor: '2024-10-04T11:00:00.000Z', status: AppointmentStatus.UPCOMING }, // Max weekly reached after this appointment
+                { scheduledFor: '2024-10-01T10:00:00.000Z', status: AppointmentStatus.OCCURRED },
+                { scheduledFor: '2024-10-01T11:00:00.000Z', status: AppointmentStatus.OCCURRED },
+                { scheduledFor: '2024-10-01T12:00:00.000Z', status: AppointmentStatus.OCCURRED }, // Max daily reached for 2024-10-01
+                { scheduledFor: '2024-10-02T10:00:00.000Z', status: AppointmentStatus.OCCURRED },
+                { scheduledFor: '2024-10-02T11:00:00.000Z', status: AppointmentStatus.OCCURRED },
+                { scheduledFor: '2024-10-03T12:00:00.000Z', status: AppointmentStatus.OCCURRED },
+                { scheduledFor: '2024-10-03T10:00:00.000Z', status: AppointmentStatus.OCCURRED },
+                { scheduledFor: '2024-10-04T11:00:00.000Z', status: AppointmentStatus.OCCURRED }, // Max weekly reached after this appointment
         ],
         availableSlots: [],
         maxDailyAppointments: 3,
