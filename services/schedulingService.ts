@@ -25,11 +25,10 @@ export function getAssessmentSlots(
 
   const maxedOutTimes = calculateMaxedOutPeriods(eligibleClinicians)
 
+  // For each clinician, filter for the maxed out periods, then optimize the slots for the most availability
   for (const clinician of eligibleClinicians) {
-    clinician.availableSlots = optimizeSlots(clinician.availableSlots)
+    clinician.availableSlots = optimizeSlots(filterMaxedOutPeriods(clinician, maxedOutTimes))
   }
-
-  filterMaxedOutPeriods(eligibleClinicians, maxedOutTimes)
 
   // Using a sliding window to retrieve the correct slot combos
   const validSlotPairs = findValidSlotPairs(eligibleClinicians);

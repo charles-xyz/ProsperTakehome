@@ -27,7 +27,7 @@ export function calculateMaxedOutPeriods(clinicians: Clinician[]): MaxedOutPerio
           maxedOutWeeks.add(`${clinician.id}-${weekNumber}`);
         }
 
-        //increment daily count and check if maxed
+        //increment daily count + check if maxed
         const dayCount = (dailyAppointments.get(dateString) || 0) + 1;
         dailyAppointments.set(dateString, dayCount);
         if (dayCount === maxDailyAppointments) {

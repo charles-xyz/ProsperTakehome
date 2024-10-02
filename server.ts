@@ -6,6 +6,7 @@ import { Patient } from "./models/patient";
 import { getAssessmentSlots } from "./services/schedulingService";
 import { v4 as uuidv4 } from "uuid";
 import { mockClinician } from "./mockClinicianData";
+import { calculateMaxedOutPeriods } from "./helpers/calcMaxedOutPeriods";
 const app: Express = express();
 const port = process.env.PORT || 3008;
 
@@ -52,4 +53,5 @@ app.post("/assessment-slots", (req: any, res: any) => {
 // Only call app.listen() once
 app.listen(port, () => {
     console.log(`[server]: Server is running at http://localhost:${port}`);
+    calculateMaxedOutPeriods([mockClinician])
 })
