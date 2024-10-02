@@ -58,7 +58,15 @@ curl -X POST http://localhost:3008/assessment-slots \
   }'
 ```
 
-The above command sends a request to the server to get assessment slots and uses jq to pretty print the JSON response.
+The above command sends a request to the server to get available assessment slots.
+
+## Running Tests For Each of The Tasks
+
+You can run tests using jest with the following command:
+
+```sh
+npx jest tests/task1.test.ts
+```
 
 ## Notes
 
