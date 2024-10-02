@@ -59,7 +59,7 @@ You can run tests using jest with the following command:
 npx jest tests/task1.test.ts
 ```
 
-each test file addresses it's respective task given your requirements, and provides basic scalability testing
+each test file addresses it's respective task given your requirements
 
 ## Notes
 
