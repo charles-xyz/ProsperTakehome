@@ -55,7 +55,7 @@ curl -X POST http://localhost:3008/assessment-slots \
     "lastName": "Doe",
     "state": "NY",
     "insurance": "AETNA"
-  }' | jq
+  }'
 ```
 
 The above command sends a request to the server to get assessment slots and uses jq to pretty print the JSON response.
