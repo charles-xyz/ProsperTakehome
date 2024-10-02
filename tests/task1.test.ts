@@ -5,7 +5,6 @@ import { ClinicianType, InsurancePayer, UsState } from '../models/enums';
 import { SlotPair } from '../models/slots';
 import mockSlots from '../slots.json'
 import { findValidSlotPairs } from '../helpers/findValidSlotPairs';
-console.log(mockSlots)
 
 
 
@@ -47,7 +46,6 @@ describe('getAssessmentSlots', () => {
   it('should return valid slot pairs for eligible clinicians', () => {
     const clinicians = [clinician];
     const slotPairs: SlotPair[] = findValidSlotPairs([clinician]);
-    console.log(slotPairs)
 
     // Expected slot pairs based on the available slots and constraints
     const expectedSlotPairs: SlotPair[] = [
